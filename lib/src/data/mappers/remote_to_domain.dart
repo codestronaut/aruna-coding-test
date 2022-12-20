@@ -1,9 +1,9 @@
-import '../../domain/models/blog.dart';
-import '../models/blog_rm.dart';
+import '../../domain/models/article.dart';
+import '../models/article_rm.dart';
 
-extension BlogRMtoDomain on BlogRM {
-  Blog toDomainModel() {
-    return Blog(
+extension ArticleRMtoDomain on ArticleRM {
+  Article toDomainModel() {
+    return Article(
       userId: userId,
       id: id,
       title: title,

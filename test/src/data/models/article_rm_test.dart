@@ -3,26 +3,26 @@ import 'package:aruna_coding_test/src/domain/domain.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  const tBlogRM = BlogRM(
+  const tArticleRM = ArticleRM(
     userId: 1,
     id: 1,
-    title: 'Blog Title',
-    content: 'Blog Content',
+    title: 'Title',
+    content: 'Content',
   );
 
-  const tBlog = Blog(
+  const tArticle = Article(
     userId: 1,
     id: 1,
-    title: 'Blog Title',
-    content: 'Blog Content',
+    title: 'Title',
+    content: 'Content',
   );
 
   group('to domain model', () {
     test(
-      'should map blog remote model to blog domain model',
+      'should map article remote model to article domain model',
       () {
-        final result = tBlogRM.toDomainModel();
-        expect(result, equals(tBlog));
+        final mappedModel = tArticleRM.toDomainModel();
+        expect(mappedModel, equals(tArticle));
       },
     );
   });

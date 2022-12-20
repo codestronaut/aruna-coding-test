@@ -9,7 +9,7 @@ import 'dart:typed_data' as _i7;
 
 import 'package:aruna_coding_test/src/data/data_sources/blog_remote_ds.dart'
     as _i3;
-import 'package:aruna_coding_test/src/data/models/blog_rm.dart' as _i5;
+import 'package:aruna_coding_test/src/data/models/article_rm.dart' as _i5;
 import 'package:http/http.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
@@ -72,13 +72,13 @@ class MockBlogRemoteDS extends _i1.Mock implements _i3.BlogRemoteDS {
         ),
       ) as _i2.Client);
   @override
-  _i4.Future<List<_i5.BlogRM>> getPosts() => (super.noSuchMethod(
+  _i4.Future<List<_i5.ArticleRM>> getArticles() => (super.noSuchMethod(
         Invocation.method(
           #getPosts,
           [],
         ),
-        returnValue: _i4.Future<List<_i5.BlogRM>>.value(<_i5.BlogRM>[]),
-      ) as _i4.Future<List<_i5.BlogRM>>);
+        returnValue: _i4.Future<List<_i5.ArticleRM>>.value(<_i5.ArticleRM>[]),
+      ) as _i4.Future<List<_i5.ArticleRM>>);
 }
 
 /// A class which mocks [Client].

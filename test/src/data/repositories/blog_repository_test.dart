@@ -16,9 +16,9 @@ void main() {
     );
   });
 
-  group('get blog posts', () {
-    final tBlogPostsRM = [
-      const BlogRM(
+  group('get blog articles', () {
+    final tBlogArticlesRM = [
+      const ArticleRM(
         userId: 1,
         id: 1,
         title: 'Blog Title 1',
@@ -26,8 +26,8 @@ void main() {
       ),
     ];
 
-    final tBlogPosts = [
-      const Blog(
+    final tBlogArticles = [
+      const Article(
         userId: 1,
         id: 1,
         title: 'Blog Title 1',
@@ -36,13 +36,14 @@ void main() {
     ];
 
     test(
-      'should return blog posts when a call to data source is successful',
+      'should return blog articles when a call to data source is successful',
       () async {
-        when(mockDataSource.getPosts()).thenAnswer((_) async => tBlogPostsRM);
+        when(mockDataSource.getArticles())
+            .thenAnswer((_) async => tBlogArticlesRM);
 
-        final result = await repository.getPosts();
-        verify(mockDataSource.getPosts());
-        expect(result, equals(tBlogPosts));
+        final result = await repository.getArticles();
+        verify(mockDataSource.getArticles());
+        expect(result, equals(tBlogArticles));
       },
     );
   });

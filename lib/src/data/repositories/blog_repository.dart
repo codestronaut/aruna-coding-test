@@ -10,8 +10,8 @@ class BlogRepository {
 
   final BlogRemoteDS remoteDS;
 
-  Future<List<Blog>> getPosts() async {
-    final blogPosts = await remoteDS.getPosts();
+  Future<List<Article>> getArticles() async {
+    final blogPosts = await remoteDS.getArticles();
     return blogPosts.map((item) => item.toDomainModel()).toList();
   }
 }

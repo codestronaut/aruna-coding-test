@@ -1,1 +1,1 @@
-export 'models/blog.dart';
+export 'models/article.dart';

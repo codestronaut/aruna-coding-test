@@ -6,7 +6,7 @@ import 'package:http/http.dart';
 
 import '../../utils/exceptions.dart';
 import '../../utils/urls.dart';
-import '../models/blog_rm.dart';
+import '../models/article_rm.dart';
 
 class BlogRemoteDS {
   BlogRemoteDS({
@@ -15,12 +15,12 @@ class BlogRemoteDS {
 
   final Client client;
 
-  Future<List<BlogRM>> getPosts() async {
+  Future<List<ArticleRM>> getArticles() async {
     try {
       final response = await client.get(Uri.parse(Urls.posts));
-      return List<BlogRM>.from(
+      return List<ArticleRM>.from(
         (json.decode(response.body) as List).map(
-          (item) => BlogRM.fromJson(item),
+          (item) => ArticleRM.fromJson(item),
         ),
       );
     } catch (error) {
