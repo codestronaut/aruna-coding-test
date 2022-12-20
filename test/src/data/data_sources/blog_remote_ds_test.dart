@@ -4,8 +4,8 @@ import 'package:aruna_coding_test/src/data/data_sources/blog_remote_ds.dart';
 import 'package:aruna_coding_test/src/data/models/blog_rm.dart';
 import 'package:aruna_coding_test/src/utils/urls.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:http/http.dart' as http;
+import 'package:mockito/mockito.dart';
 
 import '../../../json_reader.dart';
 import '../../../mock_helper.mocks.dart';

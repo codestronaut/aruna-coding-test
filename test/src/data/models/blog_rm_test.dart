@@ -6,15 +6,15 @@ void main() {
   const tBlogRM = BlogRM(
     userId: 1,
     id: 1,
-    title: "Blog Title",
-    content: "Blog Content",
+    title: 'Blog Title',
+    content: 'Blog Content',
   );
 
   const tBlog = Blog(
     userId: 1,
     id: 1,
-    title: "Blog Title",
-    content: "Blog Content",
+    title: 'Blog Title',
+    content: 'Blog Content',
   );
 
   group('to domain model', () {

@@ -1,6 +1,7 @@
-import 'package:aruna_coding_test/src/data/data.dart';
-import 'package:aruna_coding_test/src/domain/domain.dart';
 import 'package:flutter/material.dart';
+
+import '../../domain/domain.dart';
+import '../data.dart';
 
 class BlogRepository {
   BlogRepository({

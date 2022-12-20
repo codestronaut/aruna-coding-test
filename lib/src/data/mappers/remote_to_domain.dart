@@ -1,5 +1,5 @@
-import 'package:aruna_coding_test/src/data/models/blog_rm.dart';
-import 'package:aruna_coding_test/src/domain/models/blog.dart';
+import '../../domain/models/blog.dart';
+import '../models/blog_rm.dart';
 
 extension BlogRMtoDomain on BlogRM {
   Blog toDomainModel() {

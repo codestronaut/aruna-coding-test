@@ -1,11 +1,12 @@
 import 'dart:convert';
 
-import 'package:aruna_coding_test/src/data/models/blog_rm.dart';
-import 'package:aruna_coding_test/src/utils/exceptions.dart';
-import 'package:aruna_coding_test/src/utils/urls.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+
+import '../../utils/exceptions.dart';
+import '../../utils/urls.dart';
+import '../models/blog_rm.dart';
 
 class BlogRemoteDS {
   BlogRemoteDS({
