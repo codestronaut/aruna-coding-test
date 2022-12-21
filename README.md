@@ -1,6 +1,6 @@
 # aruna_coding_test
 
-A new Flutter project.
+Link to the deployed web app version: https://aruna-coding-test.web.app/
 
 ## Getting Started
 
