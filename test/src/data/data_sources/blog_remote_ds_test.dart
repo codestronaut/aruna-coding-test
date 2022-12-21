@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:aruna_coding_test/src/data/data_sources/blog_remote_ds.dart';
 import 'package:aruna_coding_test/src/data/models/article_rm.dart';
+import 'package:aruna_coding_test/src/utils/exceptions.dart';
 import 'package:aruna_coding_test/src/utils/urls.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
@@ -36,6 +37,18 @@ void main() {
 
         final result = await dataSource.getArticles();
         expect(result, equals(tArticlesRM));
+      },
+    );
+
+    test(
+      'should throw a server exception when failed',
+      () async {
+        when(mockHttpClient.get(Uri.parse(Urls.posts))).thenAnswer(
+          (_) async => http.Response('Not found', 404),
+        );
+
+        final call = dataSource.getArticles();
+        expect(() => call, throwsA(isA<ServerException>()));
       },
     );
   });
