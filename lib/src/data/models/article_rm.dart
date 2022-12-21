@@ -22,7 +22,7 @@ class ArticleRM extends Equatable {
   });
 
   factory ArticleRM.fromJson(Map<String, dynamic> json) =>
-      _$BlogRMFromJson(json);
+      _$ArticleRMFromJson(json);
 
   @override
   List<Object?> get props => [userId, id, title, content];
